@@ -1,0 +1,146 @@
+[
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/512px-Spotify_logo_without_text.svg.png",
+    "title": "Spotify",
+    "companyName": "Spotify Technology S.A.",
+    "id": 1,
+    "description": "Spotify is a leading digital music streaming service offering access to millions of songs, podcasts, and audiobooks from artists worldwide. Discover new music through personalized playlists like Discover Weekly and Daily Mix, tailored to your unique listening habits. Create and share custom playlists, follow favorite artists, and enjoy seamless streaming across all devices. Premium subscribers get ad-free listening, offline downloads, and superior audio quality. Whether working out, studying, commuting, or relaxing at home, Spotify provides the perfect soundtrack for every moment. With curated playlists for every mood and genre, it's your ultimate music companion.",
+    "size": 100,
+    "reviews": 4700000,
+    "ratingAvg": 4.5,
+    "downloads": "1B",
+    "ratings": [
+      { "name": "1 star", "count": 235000 },
+      { "name": "2 star", "count": 141000 },
+      { "name": "3 star", "count": 564000 },
+      { "name": "4 star", "count": 1410000 },
+      { "name": "5 star", "count": 2350000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/512px-Netflix_2015_logo.svg.png",
+    "title": "Netflix",
+    "companyName": "Netflix, Inc.",
+    "id": 2,
+    "description": "Netflix is the world's premier subscription-based streaming entertainment service, providing unlimited access to an extensive library of TV shows, movies, documentaries, and acclaimed original content. Watch award-winning Netflix Originals including exclusive series, films, and stand-up specials unavailable elsewhere. Enjoy personalized recommendations powered by advanced algorithms, download content for offline viewing during travel, and stream simultaneously on multiple devices. With new releases added weekly and zero commercials interrupting your experience, Netflix delivers endless entertainment for every family member across all genres. From gripping dramas to hilarious comedies, thrilling action to heartwarming documentaries, there's always something new to discover.",
+    "size": 150,
+    "reviews": 4700000,
+    "ratingAvg": 4.7,
+    "downloads": "1B",
+    "ratings": [
+      { "name": "1 star", "count": 188000 },
+      { "name": "2 star", "count": 94000 },
+      { "name": "3 star", "count": 470000 },
+      { "name": "4 star", "count": 1316000 },
+      { "name": "5 star", "count": 2632000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/512px-YouTube_full-color_icon_%282017%29.svg.png",
+    "title": "YouTube",
+    "companyName": "Google LLC",
+    "id": 3,
+    "description": "YouTube is the world's largest video-sharing platform where billions of users watch, upload, and share videos daily. Discover diverse content including music videos, movie trailers, educational tutorials, gaming streams, vlogs, and live broadcasts from creators worldwide. Subscribe to favorite channels, create custom playlists, and engage with communities through likes, comments, and shares. YouTube's powerful recommendation algorithm helps you discover new content matching your interests. With YouTube Premium, enjoy ad-free viewing, background play while using other apps, and access to YouTube Music for comprehensive entertainment. From learning new skills to staying entertained, YouTube offers unlimited possibilities for every viewer.",
+    "size": 120,
+    "reviews": 3500000,
+    "ratingAvg": 4.3,
+    "downloads": "10B",
+    "ratings": [
+      { "name": "1 star", "count": 210000 },
+      { "name": "2 star", "count": 140000 },
+      { "name": "3 star", "count": 525000 },
+      { "name": "4 star", "count": 1050000 },
+      { "name": "5 star", "count": 1575000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/512px-TikTok_logo.svg.png",
+    "title": "TikTok",
+    "companyName": "ByteDance",
+    "id": 4,
+    "description": "TikTok is a revolutionary social media platform enabling users to create, watch, and share entertaining short-form videos set to music and trending sounds. Express creativity through extensive filters, effects, and intuitive editing tools to produce engaging content that can reach millions globally. The personalized For You page uses advanced AI algorithms to curate content matching your interests and viewing habits. Join viral challenges, collaborate with creators through duets and stitches, and build an engaged follower community. Whether showcasing talents, sharing comedy sketches, or educating audiences, TikTok provides the perfect stage for creative expression and entertainment discovery.",
+    "size": 100,
+    "reviews": 2800000,
+    "ratingAvg": 4.6,
+    "downloads": "5B",
+    "ratings": [
+      { "name": "1 star", "count": 84000 },
+      { "name": "2 star", "count": 56000 },
+      { "name": "3 star", "count": 280000 },
+      { "name": "4 star", "count": 700000 },
+      { "name": "5 star", "count": 1680000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/512px-2023_Facebook_icon.svg.png",
+    "title": "Facebook",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 5,
+    "description": "Facebook is the world's largest social networking platform connecting billions of people with friends, family, and communities globally. Share photos, videos, and life updates on your timeline while staying connected with loved ones near and far. Join interest-based groups, discover local events, and follow pages from favorite brands and public figures. Communicate instantly through integrated Messenger, explore Marketplace for buying and selling items locally, and share ephemeral content through Stories. With features like Reels for short videos, Live streaming for real-time broadcasting, and comprehensive privacy controls, Facebook offers versatile ways to express yourself, stay informed, and maintain meaningful connections.",
+    "size": 200,
+    "reviews": 22700000,
+    "ratingAvg": 4.5,
+    "downloads": "5B",
+    "ratings": [
+      { "name": "1 star", "count": 1135000 },
+      { "name": "2 star", "count": 681000 },
+      { "name": "3 star", "count": 2724000 },
+      { "name": "4 star", "count": 6810000 },
+      { "name": "5 star", "count": 11350000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/512px-Instagram_logo_2016.svg.png",
+    "title": "Instagram",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 6,
+    "description": "Instagram is a premier visual storytelling platform for sharing photos and videos with followers while discovering inspiring content worldwide. Capture memorable moments using creative filters and professional editing tools, share disappearing Stories for authentic daily updates, and create engaging Reels showcasing creativity through short-form video. Connect with friends, follow influencers and brands you admire, and explore personalized content through the intelligent Explore page. Direct message friends privately, shop products seamlessly from posts and stories, and build your personal brand or business presence. Whether you're a casual user, content creator, or business owner, Instagram provides powerful tools for visual expression.",
+    "size": 150,
+    "reviews": 2500000,
+    "ratingAvg": 4.4,
+    "downloads": "5B",
+    "ratings": [
+      { "name": "1 star", "count": 150000 },
+      { "name": "2 star", "count": 100000 },
+      { "name": "3 star", "count": 350000 },
+      { "name": "4 star", "count": 700000 },
+      { "name": "5 star", "count": 1000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png",
+    "title": "WhatsApp Messenger",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 7,
+    "description": "WhatsApp is a free, secure messaging application enabling users to send text messages, voice notes, photos, videos, and documents to anyone worldwide. Make crystal-clear voice and video calls, create group chats accommodating up to 256 participants, and share real-time location with friends and family. End-to-end encryption ensures your personal messages and calls remain completely private and secure, visible only to intended recipients. Available across multiple devices including smartphones, tablets, and computers, WhatsApp keeps you seamlessly connected regardless of location. With status updates, disappearing messages, and business features, it's the comprehensive communication solution for personal and professional needs.",
+    "size": 100,
+    "reviews": 1800000,
+    "ratingAvg": 4.2,
+    "downloads": "5B",
+    "ratings": [
+      { "name": "1 star", "count": 126000 },
+      { "name": "2 star", "count": 90000 },
+      { "name": "3 star", "count": 270000 },
+      { "name": "4 star", "count": 450000 },
+      { "name": "5 star", "count": 864000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png",
+    "title": "Twitter",
+    "companyName": "X Corp.",
+    "id": 8,
+    "description": "Twitter is a dynamic real-time social networking platform for sharing thoughts, news, and updates through concise posts called tweets. Follow accounts matching your interests to curate a personalized timeline, engage with content through likes, retweets, and thoughtful replies, and participate in global conversations using hashtags. Stay instantly informed about breaking news, trending topics, and worldwide events directly from journalists, celebrities, experts, and thought leaders. Features like Twitter Spaces enable live audio conversations, while multimedia sharing options for photos, videos, GIFs, and polls enhance engagement. Twitter serves as your immediate gateway to current events, cultural moments, and meaningful discussions happening globally right now.",
+    "size": 90,
+    "reviews": 1200000,
+    "ratingAvg": 4.1,
+    "downloads": "1B",
+    "ratings": [
+      { "name": "1 star", "count": 96000 },
+      { "name": "2 star", "count": 72000 },
+      { "name": "3 star", "count": 192000 },
+      { "name": "4 star", "count": 360000 },
+      { "name": "5 star", "count": 480000 }
+    ]
+  }
+]
