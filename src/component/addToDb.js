@@ -1,34 +1,28 @@
 import { toast } from "react-toastify";
 
-const getStoredBook = () =>{
-   
-    const storedBookSTR = localStorage.getItem("readList");
-    if(storedBookSTR){
-        const storedBookData = JSON.parse(storedBookSTR);
-        return storedBookData;
-    }
-    else{
-        return [];
-    }
-}
+const getDataFromLs = () => {
+  const savedData = localStorage.getItem("appId");
+  if (savedData) {
+    return JSON.parse(savedData);
+  } else {
+    return [];
+  }
+};
 
+const saveDataToLs = (id) => {
+  const savedData = getDataFromLs();
+  if (savedData.includes(id)) {
+    return alert("Duplicate id")
+  } else {
+    savedData.push(id);
+    localStorage.setItem("appId", JSON.stringify(savedData));
+  }
+};
 
-const addToStoredDB = (id) =>{
-   
-    const storedBookData = getStoredBook();
+const removeFromLs = (id) => {
+  const savedData = getDataFromLs();
+  const filteredData = savedData.filter((ids) => ids !== id);
+  localStorage.setItem("appId", JSON.stringify(filteredData));
+};
 
-    if(storedBookData.includes(id)){
-        // console.log("Hello");
-        
-        toast('Already installed');
-        return;
-    }
-    else{
-        storedBookData.push(id);
-        const data = JSON.stringify(storedBookData);
-        localStorage.setItem("readList",data)
-    }
-
-}
-
-export {addToStoredDB,getStoredBook};
+export { getDataFromLs, removeFromLs, saveDataToLs };

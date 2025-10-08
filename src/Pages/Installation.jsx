@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
-import { getStoredBook } from '../component/addToDb';
+import { getDataFromLs, removeFromLs } from '../component/addToDb';
 import InstallApps from '../component/InstallApps';
 import Card from '../component/Card';
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -14,7 +14,11 @@ const Installation = () => {
   const[install,setInstall] = useState([])
     const data =  useLoaderData();
 
-
+   const handleRemove=(id)=>{
+    console.log(id);
+    
+    removeFromLs(id)
+   }
 
     const handleSort = (type) =>{
 
@@ -31,7 +35,7 @@ const Installation = () => {
 
 
      useEffect(()=>{
-          const storedAppsData = getStoredBook();
+          const storedAppsData = getDataFromLs();
         
           
         const convertedStoredApps = storedAppsData.map(id=>parseInt(id));
@@ -69,7 +73,7 @@ const Installation = () => {
            </div>
        
             {
-                install.map(b=><InstallApps key={b.id} b={b} data={data}></InstallApps>)
+                install.map(b=><InstallApps key={b.id} b={b}  handleRemove={ handleRemove}></InstallApps>)
             }
         
         </div>

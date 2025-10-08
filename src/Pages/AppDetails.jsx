@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { useLoaderData, useParams } from 'react-router';
-import downloadImg from '../assets/icon-downloads.png';
-import starImg from '../assets/icon-ratings.png';
-import reviewImg from '../assets/review.png';
-import { ToastContainer, toast } from 'react-toastify';
+import React, { useState } from "react";
+import { useLoaderData, useParams } from "react-router";
+import downloadImg from "../assets/icon-downloads.png";
+import starImg from "../assets/icon-ratings.png";
+import reviewImg from "../assets/review.png";
+import { ToastContainer, toast } from "react-toastify";
 
 import {
   BarChart,
@@ -13,35 +13,29 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-} from 'recharts';
+} from "recharts";
 
-import { addToStoredDB } from '../component/addToDb';
+import {saveDataToLs } from "../component/addToDb";
 
 const AppDetails = () => {
   const { id } = useParams();
   const appId = parseInt(id);
   const data = useLoaderData();
 
-  // ✅ Toggle state is now persistent using localStorage
   const [toggle, setToggle] = useState(() => {
     const saved = localStorage.getItem(`installed-${id}`);
-    return saved === 'true';
+    return saved === "true";
   });
 
   const handleInstall = (id) => {
-    toast('Installed Successfully!');
-    addToStoredDB(id);
-
-    // ✅ Save installed state
-    localStorage.setItem(`installed-${id}`, 'true');
+    toast("Installed Successfully!");
+    saveDataToLs(id);
+    localStorage.setItem(`installed-${id}`, "true");
     setToggle(true);
   };
 
   const singleApp = data.find((app) => app.id === appId);
-
-  if (!singleApp) {
-    return <p>App not found</p>;
-  }
+  if (!singleApp) return <p>App not found</p>;
 
   const {
     companyName,
@@ -55,17 +49,23 @@ const AppDetails = () => {
     ratings,
   } = singleApp;
 
-  const ratingsData = Object.entries(ratings)
-    .map(([key, value]) => ({
-      name: `${key} star`,
-      count: Number(value),
-    }))
-    .sort((a, b) => parseInt(b.name) - parseInt(a.name));
+ 
+  const ratingsData = ratings
+    ? Object.entries(ratings).map(([key, value]) => ({
+        name: `${key} star`,
+        count: Number(value),
+      }))
+    : [];
 
-  const reversedData = [...ratingsData].reverse();
+  
+  const sortedData = ratings.sort(
+  (a, b) => Number(a.name[0]) - Number(b.name[0])
+);
+
 
   return (
     <div>
+    
       <div className="max-sm:flex-col lg:flex gap-10 m-20">
         <div className="h-[350px] w-[350px] border-0 bg-white">
           <img
@@ -110,54 +110,39 @@ const AppDetails = () => {
               </div>
             </div>
 
-         
-           <button
-  disabled={toggle}
-  onClick={() => handleInstall(id)}
-  className={`border-0 rounded-sm px-8 py-2 mt-8 text-white text-[20px] font-semibold
-    ${toggle ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#00D390] cursor-pointer'}`}
->
-  {toggle ? 'Installed' : `Install Now (${size} MB)`}
-</button>
-
+            <button
+              disabled={toggle}
+              onClick={() => handleInstall(id)}
+              className={`border-0 rounded-sm px-8 py-2 mt-8 text-white text-[20px] font-semibold
+           ${toggle ? "bg-gray-400 cursor-not-allowed" : "bg-[#00D390] cursor-pointer"}`}
+            >
+              {toggle ? "Installed" : `Install Now (${size} MB)`}
+            </button>
           </div>
         </div>
       </div>
 
-     
-      <div className="ml-20 mr-20">
-        <h1 className="font-semibold text-[24px] text-[#001931] mb-4">
-          Ratings
-        </h1>
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart
-            data={reversedData}
-            layout="vertical"
-            margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
-          >
-            <CartesianGrid stroke="rgba(0, 0, 0, 0.05)" horizontal={false} />
-            <XAxis type="number" allowDecimals={false} />
-            <YAxis
-              dataKey="name"
-              type="category"
-              width={60}
-              axisLine={false}
-              tickLine={false}
-            />
-            <Tooltip
-              cursor={{ fill: 'rgba(240, 240, 240, 0.5)' }}
-              contentStyle={{ background: '#fff', border: '1px solid #ddd' }}
-              labelStyle={{ fontWeight: 'bold' }}
-            />
-            <Bar dataKey="count" fill="#f97316" radius={[0, 4, 4, 0]} />
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
+      <div className="ml-20 mr-20" style={{ height: 400 }}>
+  <h1 className="font-semibold text-[24px] text-[#001931] mb-4">Ratings</h1>
+  <ResponsiveContainer width="100%" height="100%">
+    <BarChart data={sortedData} layout="vertical" margin={{ left: 20 }}>
+      <CartesianGrid stroke="rgba(0,0,0,0.05)" horizontal={false} />
+      <XAxis type="number" allowDecimals={false} />
+      <YAxis dataKey="name" type="category" width={60} />
+      <Tooltip
+        cursor={{ fill: "rgba(240,240,240,0.5)" }}
+        contentStyle={{ background: "#fff", border: "1px solid #ddd" }}
+        labelStyle={{ fontWeight: "bold" }}
+      />
+      <Bar dataKey="count" fill="#f97316" radius={[0, 4, 4, 0]} />
+    </BarChart>
+  </ResponsiveContainer>
+</div>
 
+
+      {/* Description */}
       <div className="ml-20 mt-10 mr-20">
-        <h1 className="font-semibold text-[24px] text-[#001931] mb-2">
-          Description
-        </h1>
+        <h1 className="font-semibold text-[24px] text-[#001931] mb-2">Description</h1>
         <p className="text-[20px] text-[#627382]">{description}</p>
       </div>
 
