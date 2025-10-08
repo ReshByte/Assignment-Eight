@@ -6,7 +6,7 @@ import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
     return (
-       <div className="navbar bg-base-100 shadow-sm px-20">
+       <div className="navbar bg-base-100 shadow-sm px-20  max-sm:px-2">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -15,11 +15,18 @@ const Navbar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <Link to='/'><li><a>Home</a></li></Link>
+
+        <NavLink to='/'
+        className={({isActive})=>(isActive?"text-gradient font-medium text-md border-b-3 border-purple-500":"")} 
+        >Home</NavLink>
+
         <NavLink to='/apps'
-        className={({isActive})=>(isActive?"bg-red-500":"")}
+        className={({isActive})=>(isActive?"text-gradient font-medium text-md border-b-3 border-purple-500":"")}
         >Apps</NavLink>
-        <Link to='/installation'><li><a>Installation</a></li></Link> 
+
+        <NavLink to='/installation'
+        className={({isActive})=>(isActive?"text-gradient font-medium text-md border-b-3 border-purple-500":"")}
+        >Installation</NavLink> 
         
       </ul>
     </div>
@@ -30,23 +37,23 @@ const Navbar = () => {
     </div>
    </Link>
   </div>
-  <div className="navbar-center hidden  lg:flex">
+  <div className="navbar-center hidden  lg:flex ">
     <ul className="menu menu-horizontal px-1 gap-5">
-    <NavLink to='/' className={({isActive})=>(isActive?"text-gradient font-medium text-md":"")}
+    <NavLink to='/' className={({isActive})=>(isActive?"text-gradient font-medium text-md border-b-3 border-purple-500":"")}
     >Home</NavLink>
 
       <NavLink to='/apps' 
-      className={({isActive})=>(isActive?"text-gradient font-medium text-md":"")}>
+      className={({isActive})=>(isActive?"text-gradient font-medium text-md border-b-3 border-purple-500":"")}>
       Apps</NavLink>
 
       <NavLink to='/installation'
-      className={({isActive})=>(isActive?"text-gradient font-medium text-md":"")}>
+      className={({isActive})=>(isActive?"text-gradient font-medium text-md border-b-3 border-purple-500":"")}>
       Installation</NavLink> 
      
     </ul>
   </div>
  
-  <div className="navbar-end">
+  <div className="   navbar-end ">
    <Link to="https://github.com/ReshByte">
         <a className="btn background-gradient text-white font-medium"> <FaGithub></FaGithub> Contribute</a>
    </Link>

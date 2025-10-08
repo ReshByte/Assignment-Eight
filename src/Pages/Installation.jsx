@@ -40,8 +40,7 @@ const Installation = () => {
        
         
       const myAppsList = data.filter(book=>convertedStoredApps.includes(book.id));
-     console.log(myAppsList);
-     
+    
       
       setInstall(myAppsList);
        
@@ -70,7 +69,7 @@ const Installation = () => {
            </div>
        
             {
-                install.map(b=><InstallApps key={b.id} b={b}></InstallApps>)
+                install.map(b=><InstallApps key={b.id} b={b} data={data}></InstallApps>)
             }
         
         </div>

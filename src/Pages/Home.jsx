@@ -44,7 +44,7 @@ const Home = () => {
         </div>
         <div className='background-gradient py-15'>
             <h1 className='font-bold text-[48px] text-center text-white'>Trusted by Millions, Built for You</h1>
-           <div className='flex justify-around'>
+           <div className='  max-sm:flex-col   md:flex justify-around'>
              <div className='text-center'>
                 <p className='text-white'>Total Downloads</p>
                 <h1 className='font-extrabold text-[64px] text-white'>29.6M</h1>

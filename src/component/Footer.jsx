@@ -3,7 +3,7 @@ import logoImg from '../assets/logo.png'
 const Footer = () => {
     return (
         <footer className="mt-124.5 px-20 footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10 !bg-[#001931]  !text-white">
- <div className='flex justify-between w-full'>
+ <div className=' max-sm:flex-col max-sm:justify-center  md:flex justify-between w-full'>
      <div className='flex items-center'>
         <img className='h-[40px] w-[40px]' src={logoImg} alt="" />
         <a className="btn btn-ghost text-xl text-white font-medium">HERO.IO</a>

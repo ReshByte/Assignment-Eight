@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getStoredBook = () =>{
    
     const storedBookSTR = localStorage.getItem("readList");
@@ -18,7 +20,8 @@ const addToStoredDB = (id) =>{
     if(storedBookData.includes(id)){
         // console.log("Hello");
         
-        alert('Already exist');
+        toast('Already installed');
+        return;
     }
     else{
         storedBookData.push(id);
