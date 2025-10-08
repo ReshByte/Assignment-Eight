@@ -27,6 +27,7 @@ const AppDetails = () => {
     return saved === "true";
   });
 
+
   const handleInstall = (id) => {
     toast("Installed Successfully!");
     saveDataToLs(id);

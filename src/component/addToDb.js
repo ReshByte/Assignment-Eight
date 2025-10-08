@@ -23,7 +23,7 @@ const removeFromLs = (id) => {
     
     
   const savedData = getDataFromLs();
-  const filteredData = savedData.filter((ids) => ids !== id);
+  const filteredData = savedData.filter((ids) => parseInt(ids) !== id);
   console.log(filteredData);
   
   localStorage.setItem("appId", JSON.stringify(filteredData));

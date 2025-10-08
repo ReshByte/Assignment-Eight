@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { getDataFromLs, removeFromLs } from '../component/addToDb';
 import InstallApps from '../component/InstallApps';
-import Card from '../component/Card';
+
 import { IoMdArrowDropdown } from "react-icons/io";
+import { toast } from 'react-toastify';
 
 const Installation = () => {
 
@@ -15,10 +16,11 @@ const Installation = () => {
     const data =  useLoaderData();
 
    const handleRemove=(id)=>{
-    
+   
     
     removeFromLs(id);
      setInstall((prev) => prev.filter((app) => app.id !== id));
+      toast('App is uninstalled!');
    }
 
     const handleSort = (type) =>{
@@ -76,6 +78,8 @@ const Installation = () => {
             {
                 install.map(b=><InstallApps key={b.id} b={b}  handleRemove={ handleRemove}></InstallApps>)
             }
+        
+
         
         </div>
     );
