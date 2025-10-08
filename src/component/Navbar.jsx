@@ -2,7 +2,7 @@ import React from 'react';
 import logoImg from '../assets/logo.png'
 import githubLogo from '../assets/fi_2111432.png'
 import { FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
     return (
@@ -16,8 +16,11 @@ const Navbar = () => {
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <Link to='/'><li><a>Home</a></li></Link>
-        <Link to='/apps'><li><a>Apps</a></li></Link> 
-        <li><a>Installation</a></li>
+        <NavLink to='/apps'
+        className={({isActive})=>(isActive?"bg-red-500":"")}
+        >Apps</NavLink>
+        <Link to='/installation'><li><a>Installation</a></li></Link> 
+        
       </ul>
     </div>
    <Link to="/">
@@ -27,17 +30,27 @@ const Navbar = () => {
     </div>
    </Link>
   </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-    <Link to='/'> <li><a className='font-medium text-md  '>Home</a></li></Link>
-      <Link to='/apps'>  <li><a className='font-medium'>Apps</a></li> </Link>
-      <li><a className='font-medium'>Installation</a></li>
+  <div className="navbar-center hidden  lg:flex">
+    <ul className="menu menu-horizontal px-1 gap-5">
+    <NavLink to='/' className={({isActive})=>(isActive?"text-gradient font-medium text-md":"")}
+    >Home</NavLink>
+
+      <NavLink to='/apps' 
+      className={({isActive})=>(isActive?"text-gradient font-medium text-md":"")}>
+      Apps</NavLink>
+
+      <NavLink to='/installation'
+      className={({isActive})=>(isActive?"text-gradient font-medium text-md":"")}>
+      Installation</NavLink> 
+     
     </ul>
   </div>
  
   <div className="navbar-end">
-   
-    <a className="btn background-gradient text-white font-medium"> <FaGithub></FaGithub> Contribute</a>
+   <Link to="https://github.com/ReshByte">
+        <a className="btn background-gradient text-white font-medium"> <FaGithub></FaGithub> Contribute</a>
+   </Link>
+    
   </div>
 </div>
     );
