@@ -114,7 +114,7 @@ const AppDetails = () => {
               disabled={toggle}
               onClick={() => handleInstall(id)}
               className={`border-0 rounded-sm px-8 py-2 mt-8 text-white text-[20px] font-semibold
-           ${toggle ? "bg-gray-400 cursor-not-allowed" : "bg-[#00D390] cursor-pointer"}`}
+    ${toggle ? "bg-gray-400 cursor-not-allowed" : "bg-[#00D390] cursor-pointer"}`}
             >
               {toggle ? "Installed" : `Install Now (${size} MB)`}
             </button>

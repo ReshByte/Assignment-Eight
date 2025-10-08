@@ -15,9 +15,10 @@ const Installation = () => {
     const data =  useLoaderData();
 
    const handleRemove=(id)=>{
-    console.log(id);
     
-    removeFromLs(id)
+    
+    removeFromLs(id);
+     setInstall((prev) => prev.filter((app) => app.id !== id));
    }
 
     const handleSort = (type) =>{
