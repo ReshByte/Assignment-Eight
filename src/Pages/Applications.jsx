@@ -63,7 +63,7 @@ const Applications = () => {
       </div>
     ) : (
       filteredData.length > 0 ? (
-        <div className='grid grid-cols-1  md:grid-cols-2  lg:grid-cols-4 gap-6 p-20'>
+        <div className='grid grid-cols-1 max-sm:p-10 md:grid-cols-2  lg:grid-cols-4 gap-6 p-20'>
           {filteredData.map(data => (
             <Application key={data.id} data={data} />
           ))}
