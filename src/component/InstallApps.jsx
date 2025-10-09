@@ -9,7 +9,7 @@ console.log(b.id);
     
 
   return (
-    <div className="max-sm:flex max-sm:mx-5  lg:flex justify-between items-center border-0 bg-white p-5 rounded-sm mx-20 mb-5  ">
+    <div className="max-sm:flex max-sm:mx-1  lg:flex justify-between items-center border-0 bg-white p-5 rounded-sm mx-20 mb-5  ">
       <div className="flex gap-5">
         <div className="border-0 h-[80px] w-[80px] p-2 flex items-center bg-gray-200 rounded-xl">
           <img className="" src={b.image} alt="" />

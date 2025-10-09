@@ -16,11 +16,11 @@ const Installation = () => {
     const data =  useLoaderData();
 
    const handleRemove=(id)=>{
-   
+    toast('App is uninstalled!');
     
     removeFromLs(id);
      setInstall((prev) => prev.filter((app) => app.id !== id));
-      toast('App is uninstalled!');
+     
    }
 
     const handleSort = (type) =>{
@@ -62,7 +62,7 @@ const Installation = () => {
             <p className=' text-center'>Explore All Trending Apps on the Market developed by us</p>
            </div>
 
-           <div className='flex justify-between mb-4 mx-20'>
+           <div className='  lg:flex justify-between mb-4 mx-20'>
             <h1 className='text-[#001931] text-[24px] font-semibold'>{install.length} Apps Found</h1>
             <div>
                  <details className="dropdown">

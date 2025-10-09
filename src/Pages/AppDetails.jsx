@@ -58,44 +58,46 @@ const AppDetails = () => {
       }))
     : [];
 
+    console.log(ratings);
+    
   
-  const sortedData = ratings.sort(
-  (a, b) => Number(a.name[0]) - Number(b.name[0])
+  const sortedData = [...ratings].sort(
+  (a, b) => parseInt(a.name) - parseInt(b.name)
 );
 
 
   return (
-    <div>
+    <div className="max-sm:mt-20">
     
-      <div className="max-sm:flex-col lg:flex gap-10 m-20">
-        <div className="h-[350px] w-[350px] border-0 bg-white">
+      <div className="max-sm:flex-col max-sm:gap-0 max-sm:m-0  md:flex lg:flex gap-10 m-20">
+        <div className=" max-sm:h-[250px] max-sm:w-full max-sm:m-0 lg:h-[350px] w-[350px] border-0 bg-white">
           <img
-            className="w-[310px] h-[300px] mx-auto p-10"
+            className=" max-sm:w-[200px] max-sm:h-[200px]    lg:w-[310px] h-[300px] mx-auto p-10"
             src={image}
             alt={title}
           />
         </div>
 
         <div>
-          <h1 className="font-bold text-[32px] text-[#001931]">{title}</h1>
-          <p className="text-[#627382]">
+          <h1 className="font-bold text-[32px] text-[#001931] max-sm:text-center">{title}</h1>
+          <p className="text-[#627382] max-sm:text-center">
             Developed by <span className="text-gradient">{companyName}</span>
           </p>
 
           <div className="max-sm:w-2xl lg:border-b border-gray-400 w-5xl mt-6"></div>
 
-          <div className="mt-8">
+          <div className="max-sm:text-center mt-8">
             <div className="max-sm:flex-col max-sm:gap-10 lg:flex gap-20">
               <div className="max-sm:mb-5">
-                <img src={downloadImg} alt="Downloads" />
+                <img className="max-sm:mx-auto" src={downloadImg} alt="Downloads" />
                 <p className="text-[#001931]">Downloads</p>
                 <h1 className="font-extrabold text-[40px] text-[#001931]">
                   {downloads}
                 </h1>
               </div>
 
-              <div className="max-sm:mb-5">
-                <img src={starImg} alt="Ratings" />
+              <div className="max-sm:mb-5 ">
+                <img className="max-sm:mx-auto" src={starImg} alt="Ratings" />
                 <p className="text-[#001931]">Average Ratings</p>
                 <h1 className="font-extrabold text-[40px] text-[#001931]">
                   {ratingAvg}
@@ -103,13 +105,14 @@ const AppDetails = () => {
               </div>
 
               <div className="max-sm:mb-5">
-                <img src={reviewImg} alt="Reviews" />
+                <img className="max-sm:mx-auto" src={reviewImg} alt="Reviews" />
                 <p className="text-[#001931]">Total Reviews</p>
                 <h1 className="font-extrabold text-[40px] text-[#001931]">
                   {reviews}
                 </h1>
               </div>
             </div>
+          
 
             <button
               disabled={toggle}
@@ -123,7 +126,7 @@ const AppDetails = () => {
         </div>
       </div>
 
-      <div className="ml-20 mr-20" style={{ height: 400 }}>
+      <div className="max-sm:m-0 max-sm:p-6  lg:ml-20 mr-20 mb-30" style={{ height: 400 }}>
   <h1 className="font-semibold text-[24px] text-[#001931] mb-4">Ratings</h1>
   <ResponsiveContainer width="100%" height="100%">
     <BarChart data={sortedData} layout="vertical" margin={{ left: 20 }}>
@@ -142,12 +145,12 @@ const AppDetails = () => {
 
 
       {/* Description */}
-      <div className="ml-20 mt-10 mr-20">
+      <div className="max-sm:ml-0 max-sm:mt-30 max-sm:mr-0 max-sm:p-6 lg:ml-20 mt-10 mr-20">
         <h1 className="font-semibold text-[24px] text-[#001931] mb-2">Description</h1>
         <p className="text-[20px] text-[#627382]">{description}</p>
       </div>
 
-      <ToastContainer />
+   
     </div>
   );
 };

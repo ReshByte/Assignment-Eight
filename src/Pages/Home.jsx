@@ -15,8 +15,8 @@ const Home = () => {
     return (
         <div>
             <div className='mt-[80px]'>
-         <div>
-            <h1 className='text-6xl font-bold text-center'>We Build <br />
+         <div className=''>
+            <h1 className=' text-4xl   lg:text-6xl font-bold text-center'>We Build <br />
  <span className='text-gradient'> Productive</span> Apps</h1>
          </div>
 
